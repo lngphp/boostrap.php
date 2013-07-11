@@ -13,8 +13,8 @@
     @set_error_handler('__globalErrorHandler');
     @set_exception_handler('__globalErrorHandler');
     @register_shutdown_function(function() {
-        if(error_get_last())
+        if(error_get_last()) // <--- WTF?!
         {
-            echo "Script executed successfully!";
+            echo "Script executed successfully!"; // <--- WTF?!
         }
     });
